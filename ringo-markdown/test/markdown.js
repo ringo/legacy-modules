@@ -1,10 +1,5 @@
-// adds the legacy markdown module to the search path
-// this makes it available via require and loads the package descriptor
-// which adds the markdown.jar to the class path
-require('ringo/engine').addRepository(module.resolve('../../'));
-
 // require the legacy module
-var markdown = require('ringo-markdown');
+var markdown = require(module.resolve('../'));
 var assert = require('assert');
 
 exports.testHeadlines = function() {
