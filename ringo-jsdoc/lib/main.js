@@ -18,7 +18,7 @@ var markdown = require('ringo-markdown');
 var mustache = require('ringo-mustache');
 
 var {repositoryList, moduleDoc, moduleList, structureModuleDoc, getRepositoryName}
-        = require('ringo-jsdoc/jsdoc');
+        = require('ringo-jsdoc/jsdocserializer');
 var defaultContext = {};
 var templates = {
         module: getResource('../templates/module.html').content,
@@ -64,7 +64,7 @@ var renderRepository = exports.renderRepository = function (repository, director
  */
 function copyStaticFiles(directory) {
     fs.makeTree(fs.join(directory, 'static'));
-    fs.copyTree(fs.join(module.directory, 'static'), fs.join(directory, 'static'));
+    fs.copyTree(fs.join(module.directory, '../static'), fs.join(directory, 'static'));
 }
 
 /**
