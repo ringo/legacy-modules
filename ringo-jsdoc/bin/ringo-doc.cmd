@@ -1,0 +1,1 @@
+ringo -m "%~dp0..\packages\" "%~dp0..\lib\main.js" %*
