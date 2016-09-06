@@ -275,7 +275,7 @@ exports.parseResource = function(resource) {
             exportedName = node.name;
         }
         // var foo = exports.foo = bar
-        if (node.type == Token.VAR || node.type == Token.LET) {
+        if (node.type == Token.VAR || node.type == Token.LET || node.type == Token.CONST) {
             for each (var n in ScriptableList(node.variables)) {
                 if (n.target.type == Token.NAME && arrays.contains(exported, n.target.string)) {
                     if (getNestingLevel(node) == 1) {
