@@ -1,0 +1,37 @@
+{
+   "name": "posix-fs",
+   "version": "0.11",
+   "description": "The legacy fs module depending on JNR POSIX used in Ringo 0.11 and before.",
+   "homepage": "http://ringojs.org",
+   "keywords": [
+      "fs",
+      "posix",
+      "legacy"
+   ],
+   "author": "Hannes Wallnhöfer",
+   "contributors": [
+      "Philipp Naderer"
+   ],
+   "bugs": "https://github.com/ringo/legacy-modules/issues",
+   "licenses": [
+      {
+         "type": "Apache 2.0",
+         "url": "https://raw.githubusercontent.com/ringo/legacy-modules/master/LICENSE"
+      }
+   ],
+   "repositories": [{
+      "type": "git",
+      "url": "https://github.com/ringo/legacy-modules.git"
+   }],
+   "engines": {
+      "ringojs": ">= 0.6"
+   },
+   "jars": [
+      "jars/jaffl-0.5.12.jar",
+      "jars/jffi-1.0.10-native.jar",
+      "jars/jffi-1.0.10.jar",
+      "jars/jnr-posix-1.1.9.jar",
+      "jars/jnr-x86asm-1.0.0.jar"
+   ],
+   "main": "lib/posix-fs.js"
+}
