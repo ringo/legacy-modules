@@ -1,0 +1,29 @@
+{
+   "name": "ringo-httpserver",
+   "version": "1.2.1",
+   "description": "The legacy httpserver used in Ringo 1.2.1 and before.",
+   "homepage": "https://ringojs.org",
+   "keywords": [
+      "http",
+      "server"
+   ],
+   "author": "Hannes Wallnhöfer",
+   "contributors": [
+      "Philipp Naderer-Puiu"
+   ],
+   "bugs": "https://github.com/ringo/legacy-modules/issues",
+   "licenses": [
+      {
+         "type": "Apache 2.0",
+         "url": "https://raw.githubusercontent.com/ringo/legacy-modules/master/LICENSE"
+      }
+   ],
+   "repositories": [{
+      "type": "git",
+      "url": "https://github.com/ringo/legacy-modules.git"
+   }],
+   "engines": {
+      "ringojs": ">= 0.8"
+   },
+   "main": "lib/httpserver.js"
+}
