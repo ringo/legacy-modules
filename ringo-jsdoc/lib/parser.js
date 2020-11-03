@@ -2,12 +2,6 @@
  * @fileoverview This module provides an interface to the Rhino parser.
  */
 
-export("Token",
-       "Parser",
-       "isName",
-       "getName",
-       "getTypeName");
-
 /**
  * Create a new Parser object. The constructor must be called with the `new` keyword.
  * It takes an `options` argument which may contain the following properties:
@@ -19,7 +13,7 @@ export("Token",
  *
  * @param {Object} options the parser options
  */
-function Parser(options) {
+exports.Parser = function Parser(options) {
 
     options = options || {};
 
@@ -82,7 +76,7 @@ function Parser(options) {
  *
  *     node.type == Token.NAME
  */
-var Token = org.mozilla.javascript.Token;
+var Token = exports.Token = org.mozilla.javascript.Token;
 
 /**
  * Utility function to test whether a node is a `NAME` node
@@ -90,7 +84,7 @@ var Token = org.mozilla.javascript.Token;
  * @param {Object} node an AST node
  * @returns {Boolean} true if node is a name node
  */
-function isName(node) {
+exports.isName = function isName(node) {
     return node instanceof org.mozilla.javascript.ast.Name;
 }
 
@@ -100,7 +94,7 @@ function isName(node) {
  * @param {AstNode} node an AST node
  * @returns {String} the name value of the node
  */
-function getName(node) {
+exports.getName = function getName(node) {
     return isName(node) ? node.getString() : "";
 }
 
@@ -109,7 +103,7 @@ function getName(node) {
  * @param {AstNode} node a AST node
  * @returns {String} the name of the AST node's type
  */
-function getTypeName(node) {
+exports.getTypeName = function getTypeName(node) {
     return node ? Token.typeToName(node.getType()) : "" ;
 }
 
